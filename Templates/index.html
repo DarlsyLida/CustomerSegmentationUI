@@ -29,7 +29,38 @@
             align-items: center;
             justify-content: center;
             margin: auto;
+            text-align: center;
         }
+        .is-size-4{
+            font-size: 40px;
+        }
+        .submit{
+            background-color: green;
+            width: 100%;
+            border-radius: 5px;
+            padding: 15px;
+            color: ivory;
+            font-size: 25px;
+        }
+        p{
+            text-align: left;
+            text-transform: capitalize;
+            font-size: 25px;
+            font-weight: 300;
+            font: bold;
+        }
+        /*css for mobile size */
+@media only screen and (max-width: 760px){
+    .login-form-container{
+        position: absolute;
+        width: 95%;
+        height: 130%;
+        padding: 5%;
+        justify-content: center;
+        margin: 4% auto;
+    }
+    
+}
     </style>
 </head>	
 <body>
@@ -82,7 +113,7 @@
                 </div>
                 
                 <div class="field">
-                    <button class="button is-fullwidth is-rounded is-success">Submit</button>
+                    <button class="submit">Submit</button>
                 </div>
                 </div>
             </div>
@@ -94,7 +125,7 @@
                     <b>{{ variable }}</b> : {{ value }}
                 {% endfor %}
                 <br>
-                <br> Predicted cluster that fit the product:
+                <br> Predicted segment that fit the product:
                    <p style="font-size:50px">{{ result }}</p>
             {% endif %}
         </div>
